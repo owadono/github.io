@@ -87,7 +87,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* CONTACT SECTION STYLING (SKY BLUE THEME) */
+/* CONTACT SECTION STYLING (SKY BLUE BUTTON THEME) */
 .contact-info {
     margin-top: 18px;
     display: flex;
@@ -102,12 +102,13 @@ body {
     font-size: 0.88rem;
     letter-spacing: 0.3px;
     color: #38bdf8; /* Sky Blue */
-    text-decoration: none;
-    font-weight: 600;
     background: rgba(56, 189, 248, 0.04);
     padding: 6px 16px;
     border-radius: 20px;
     border: 1px solid rgba(56, 189, 248, 0.15);
+    cursor: pointer;
+    outline: none;
+    user-select: none;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -245,20 +246,27 @@ body {
     background: rgba(234, 179, 8, 0.05);
 }
 
-/* UPDATED: Sized down certificate for cleaner aesthetics */
-.certificate-wrapper {
+/* CERTIFICATE CONTAINER DESIGN (MATCHES CARDS, SLIGHTLY LARGER) */
+.certificate-container {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+.certificate-wrapper {
+    background: rgba(51, 65, 85, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 12px;
+    width: 100%;
+    max-width: 340px; /* Set a bit larger than standard project items (280px) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .certificate-wrapper img {
     width: 100%;
-    max-width: 520px; /* Constrained width so it doesn't span too large */
     height: auto;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: block;
 }
 
 /* ==========================================
@@ -293,5 +301,13 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .certificate-container {
+        justify-content: center;
+    }
+    
+    .certificate-wrapper {
+        max-width: 100%;
     }
 }
