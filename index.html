@@ -70,6 +70,30 @@
             </div>
 
             <div class="projects" style="margin-bottom: 50px;">
+                <h2>Project Design</h2>
+                <div class="project-design-card">
+                    <div class="project-design-info">
+                        <h3>Deep Learning-Based Potato Health Classification for Automated Segregation System</h3>
+                        <ul class="project-design-list">
+                            <li>Led the design and development of hardware components for an automated classification system.</li>
+                            <li>Conducted troubleshooting and maintenance of hardware components to ensure system reliability.</li>
+                            <li>Collaborated with team members to support system integration and testing.</li>
+                        </ul>
+                    </div>
+                    <div class="project-design-gallery">
+                        <div class="design-img-wrapper">
+                            <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/PD%20prototype.JPG" alt="Prototype" class="zoomable" onclick="zoomImage(this)">
+                            <span class="img-caption">Physical Prototype</span>
+                        </div>
+                        <div class="design-img-wrapper">
+                            <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/PD%20prototype%203d%20design.JPG" alt="Prototype 3D Design" class="zoomable" onclick="zoomImage(this)">
+                            <span class="img-caption">Prototype 3D Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects" style="margin-bottom: 50px;">
                 <h2>Seminars & Trainings</h2>
                 <div class="projects-grid">
                     <div class="project-box">
@@ -303,6 +327,7 @@
             lightbox.classList.add('active');
         }
 
+        // Handles closing the zoom view safely
         function closeZoom() {
             const lightbox = document.getElementById('imageLightbox');
             lightbox.classList.remove('active');
