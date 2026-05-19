@@ -25,9 +25,9 @@
                 <p class="school">Technological Institute of the Professionals - Quezon City</p>
                 
                 <div class="contact-info">
-                    <a href="mailto:kaloy0312@gmail.com" class="contact-link">📧 kaloy0312@gmail.com</a>
+                    <button class="contact-link" onclick="copyToClipboard('kaloy0312@gmail.com', this)">📧 kaloy0312@gmail.com</button>
                     <span class="separator">•</span>
-                    <a href="tel:+639107324742" class="contact-link">📱 +63 910 732 4742</a>
+                    <button class="contact-link" onclick="copyToClipboard('+639107324742', this)">📱 +63 910 732 4742</button>
                 </div>
             </div>
 
@@ -48,8 +48,10 @@
 
             <div class="projects" style="margin-bottom: 50px;">
                 <h2>Cloud Quest Completer</h2>
-                <div class="certificate-wrapper">
-                    <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/Cloud%20Quest%20Certificate.jpg" alt="Cloud Quest Certificate">
+                <div class="certificate-container">
+                    <div class="certificate-wrapper">
+                        <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/Cloud%20Quest%20Certificate.jpg" alt="Cloud Quest Certificate">
+                    </div>
                 </div>
             </div>
 
@@ -272,5 +274,20 @@
         </div>
     </div>
 
+    <script>
+        function copyToClipboard(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = element.innerHTML;
+                element.innerHTML = "✨ Copied!";
+                element.style.borderColor = "#ffffff";
+                setTimeout(() => {
+                    element.innerHTML = originalText;
+                    element.style.borderColor = "rgba(56, 189, 248, 0.15)";
+                }, 1500);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
 </body>
 </html>
