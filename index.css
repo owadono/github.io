@@ -101,7 +101,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.88rem;
     letter-spacing: 0.3px;
-    color: #38bdf8; /* Sky Blue */
+    color: #38bdf8;
     background: rgba(56, 189, 248, 0.04);
     padding: 6px 16px;
     border-radius: 20px;
@@ -127,7 +127,7 @@ body {
 }
 
 /* ==========================================
-   4. TECHNICAL CORE (SKILLS)
+   4. TECHNICAL CORE (SKILLS LINKS)
    ========================================== */
 .skills {
     margin-bottom: 40px;
@@ -152,18 +152,20 @@ body {
     gap: 10px;
 }
 
-.skill-tags span {
+/* Updated selector to handle active anchor tags smoothly */
+.skill-tags a {
     background: rgba(51, 65, 85, 0.5);
     color: #e2e8f0;
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 0.9rem;
     font-weight: 500;
+    text-decoration: none;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.2s ease;
 }
 
-.skill-tags span:hover {
+.skill-tags a:hover {
     background: #0d9488;
     color: #ffffff;
     border-color: #0d9488;
@@ -258,7 +260,7 @@ body {
     border-radius: 16px;
     padding: 12px;
     width: 100%;
-    max-width: 340px; /* Sized beautifully slightly larger than your project grid items */
+    max-width: 340px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -270,7 +272,57 @@ body {
 }
 
 /* ==========================================
-   6. RESPONSIVE DESIGN (MEDIA QUERIES)
+   6. INTERACTIVE LIGHTBOX ZOOM EFFECTS
+   ========================================== */
+.zoomable {
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+
+.zoomable:hover {
+    opacity: 0.9;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+/* ==========================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
 @media (max-width: 640px) {
     body {
