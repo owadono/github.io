@@ -246,7 +246,7 @@ body {
     background: rgba(234, 179, 8, 0.05);
 }
 
-/* CERTIFICATE CONTAINER DESIGN (MATCHES CARDS, SLIGHTLY LARGER) */
+/* CERTIFICATE CONTAINER DESIGN */
 .certificate-container {
     display: flex;
     justify-content: flex-start;
@@ -258,7 +258,7 @@ body {
     border-radius: 16px;
     padding: 12px;
     width: 100%;
-    max-width: 340px; /* Set a bit larger than standard project items (280px) */
+    max-width: 340px; /* Sized beautifully slightly larger than your project grid items */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
