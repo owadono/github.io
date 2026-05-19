@@ -4,39 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joshua Castillo | Portfolio</title>
-
+    <!-- Modern, clean font imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
     <div class="container">
-
         <div class="card">
 
             <!-- PROFILE SECTION -->
             <div class="profile-section">
-
-                <!-- Replace profile.jpg with your actual image filename -->
                 <img src="profile.jpg" alt="Joshua Castillo" class="profile-pic">
-
                 <h1>Joshua Castillo</h1>
-
-                <p class="course">
-                    Bachelor of Science in Computer Engineering
-                </p>
-
-                <p class="school">
-                    Technological Institute of the Philippines - Quezon City
-                </p>
-
+                <p class="course">Bachelor of Science in Computer Engineering</p>
+                <p class="school">Technological Institute of the Philippines - Quezon City</p>
             </div>
 
             <!-- SKILLS -->
             <div class="skills">
-
                 <h2>Skills</h2>
-
                 <div class="skill-tags">
                     <span>Linux</span>
                     <span>Ubuntu</span>
@@ -47,93 +36,101 @@
                     <span>HTML & CSS</span>
                     <span>Virtual Machines</span>
                 </div>
-
             </div>
 
-            <!-- PROJECTS -->
+            <!-- PROJECTS & ACTIVITIES (Fixed closing tag placement here) -->
             <div class="projects">
-
                 <h2>Projects & Activities</h2>
 
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Activity%201%20-%20Creating%20Virtual%20Machines%20in%20Microsoft%20Azure-1%20(3).pdf" target="_blank">
-                        Activity 1 - Creating Virtual Machines in Microsoft Azure.pdf
-                    </a>
-                </div>
+                <div class="projects-grid">
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Activity%201%20-%20Creating%20Virtual%20Machines%20in%20Microsoft%20Azure-1%20(3).pdf" target="_blank">
+                            Activity 1 - Creating Virtual Machines in Microsoft Azure.pdf
+                        </a>
+                    </div>
 
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%202%20-%20SSH%20Key-Based%20Authentication%20and%20GIT%20Setup-1-1%20(1).pdf" target="_blank">
-                        Activity 2 - SSH Key-Based Authentication and GIT Setup.pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%203%20-%20Install%20SSH%20server%20on%20CentOS%20or%20RHEL%208%20(3).pdf" target="_blank">
-                        Activity 3 - Install SSH server on CentOS or RHEL 8.pdf 
-                    </a>
-                </div>
-            </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%204%20-%20Running%20Elevated%20Ad%20hoc%20Commands-1%20(1).pdf" target="_blank">
-                        Activity 4 - Running Elevated Ad hoc Commands.pdf 
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%206%20-%20Targeting%20Specific%20Nodes%20(1).pdf" target="_blank">
-                        Activity 6 - Targeting Specific Nodes.pdf
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%202%20-%20SSH%20Key-Based%20Authentication%20and%20GIT%20Setup-1-1%20(1).pdf" target="_blank">
+                            Activity 2 - SSH Key-Based Authentication and GIT Setup.pdf
+                        </a>
+                    </div>
 
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Activity%207%20-%20Managing%20Files%20and%20Creating%20Roles%20in%20Ansible.pdf" target="_blank">
-                        Activity 7 - Managing Files and Creating Roles in Ansible.pdf
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%203%20-%20Install%20SSH%20server%20on%20CentOS%20or%20RHEL%208%20(3).pdf" target="_blank">
+                            Activity 3 - Install SSH server on CentOS or RHEL 8.pdf 
+                        </a>
+                    </div>
 
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%208_%20Install%2C%20Configure%2C%20and%20Manage%20Availability%20Monitoring%20tools%20%20(1).pdf" target="_blank">
-                        Activity 8 - Install, Configure, and Manage Availability Monitoring tools.pdf
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Prelims/Castillo_Activity%204%20-%20Running%20Elevated%20Ad%20hoc%20Commands-1%20(1).pdf" target="_blank">
+                            Activity 4 - Running Elevated Ad hoc Commands.pdf 
+                        </a>
+                    </div>
 
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%209_%20Install%2C%20Configure%2C%20and%20Manage%20Performance%20Monitoring%20tools.pdf" target="_blank">
-                        Activity 9 - Install, Configure, and Manage Performance Monitoring tools.pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%2010_%20Install%2C%20Configure%2C%20and%20Manage%20Log%20Monitoring%20tools.pdf" target="_blank">
-                        Activity 10 - Install, Configure, and Manage Log Monitoring tools.pdf
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%206%20-%20Targeting%20Specific%20Nodes%20(1).pdf" target="_blank">
+                            Activity 6 - Targeting Specific Nodes.pdf
+                        </a>
+                    </div>
 
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Midterm%20Skills%20Exam%20-%20CPE%20232%20.pdf" target="_blank">
-                        Midterm Skills Exam - CPE 232 .pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Castillo_Activity%2012%20Build%20a%20Sample%20Web%20App%20in%20a%20Docker%20Container.pdf" target="_blank">
-                        Activity 12 - Build a Sample Web App in a Docker Container.pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group2_Activity%2013%20-%20OpenStack%20Prerequisite%20Installation.docx.pdf" target="_blank">
-                        Activity 13 - OpenStack Prerequisite Installation.docx.pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/GROUP2_Activity-14-OpenStack-Installation-Keystone-Glance-Nova-1.pdf" target="_blank">
-                        Activity 14 - OpenStack-Installation-Keystone-Glance-Nova-1.pdf
-                    </a>
-                </div>
-                <div class="project-box">
-                    <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group%202_Activity%2015-%20OpenStack%20Installation%20(Neutron%2C%20Horizon%2C%20Cinder).pdf" target="_blank">
-                        Activity 15 - OpenStack Installation (Neutron, Horizon, Cinder).pdf
-                    </a>
-                </div>
-        </div>
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Activity%207%20-%20Managing%20Files%20and%20Creating%20Roles%20in%20Ansible.pdf" target="_blank">
+                            Activity 7 - Managing Files and Creating Roles in Ansible.pdf
+                        </a>
+                    </div>
 
-    </div>
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%208_%20Install%2C%20Configure%2C%20and%20Manage%20Availability%20Monitoring%20tools%20%20(1).pdf" target="_blank">
+                            Activity 8 - Install, Configure, and Manage Availability Monitoring tools.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%209_%20Install%2C%20Configure%2C%20and%20Manage%20Performance%20Monitoring%20tools.pdf" target="_blank">
+                            Activity 9 - Install, Configure, and Manage Performance Monitoring tools.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%2010_%20Install%2C%20Configure%2C%20and%20Manage%20Log%20Monitoring%20tools.pdf" target="_blank">
+                            Activity 10 - Install, Configure, and Manage Log Monitoring tools.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Midterm%20Skills%20Exam%20-%20CPE%20232%20.pdf" target="_blank">
+                            Midterm Skills Exam - CPE 232 .pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Castillo_Activity%2012%20Build%20a%20Sample%20Web%20App%20in%20a%20Docker%20Container.pdf" target="_blank">
+                            Activity 12 - Build a Sample Web App in a Docker Container.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group2_Activity%2013%20-%20OpenStack%20Prerequisite%20Installation.docx.pdf" target="_blank">
+                            Activity 13 - OpenStack Prerequisite Installation.docx.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/GROUP2_Activity-14-OpenStack-Installation-Keystone-Glance-Nova-1.pdf" target="_blank">
+                            Activity 14 - OpenStack-Installation-Keystone-Glance-Nova-1.pdf
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group%202_Activity%2015-%20OpenStack%20Installation%20(Neutron%2C%20Horizon%2C%20Cinder).pdf" target="_blank">
+                            Activity 15 - OpenStack Installation (Neutron, Horizon, Cinder).pdf
+                        </a>
+                    </div>
+                </div> <!-- End of projects-grid -->
+
+            </div> <!-- End of projects -->
+        </div> <!-- End of card -->
+    </div> <!-- End of container -->
 
 </body>
 </html>
