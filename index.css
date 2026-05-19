@@ -8,14 +8,13 @@
 }
 
 body {
-    background: radial-gradient(circle at top, #13233a, #070a13 80%);
-    background-color: #070a13;
+    background-color: #f8fafc; /* Crisp, clean slate-white background */
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Prevents overflow issues on long scrollable content */
+    align-items: flex-start; 
     padding: 120px 20px 60px 20px; 
-    color: #f8fafc;
+    color: #1e293b; /* Premium slate dark font colors */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -25,7 +24,7 @@ body {
     position: relative;
 }
 
-/* Profile Image Floating Presentation */
+/* Profile Image Centering & Layout */
 .avatar-wrapper {
     position: absolute;
     top: -60px;
@@ -39,45 +38,40 @@ body {
     height: 120px;
     border-radius: 24px; 
     object-fit: cover;
-    border: 2px solid rgba(45, 212, 191, 0.4); 
-    box-shadow: 0 12px 40px rgba(20, 184, 166, 0.25);
-    background-color: #1e293b;
+    border: 4px solid #ffffff; /* Crisp border framing */
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    background-color: #f1f5f9;
 }
 
-/* Dark Frosted Glass Dashboard Card */
+/* Minimalist Corporate Card Layer */
 .card {
-    background: rgba(13, 20, 38, 0.6);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 32px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0; /* Subtle light layout lines */
+    border-radius: 24px;
     padding: 90px 50px 50px 50px; 
-    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.03);
 }
 
-/* Profile Section Styling */
+/* Profile Typography Elements */
 .profile-section {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .profile-section h1 {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -0.75px;
     margin-bottom: 8px;
-    color: #ffffff;
-    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #0f172a;
 }
 
 .course {
     font-size: 16px;
-    font-weight: 500;
-    color: #2dd4bf; 
+    font-weight: 600;
+    color: #0d9488; /* Professional tech-teal focal accent color */
     margin-bottom: 6px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .school {
@@ -86,59 +80,57 @@ body {
     font-weight: 500;
 }
 
-/* Section Headings */
+/* Section Divider Headers */
 .skills h2,
 .projects h2 {
     text-align: center;
     margin-bottom: 24px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    color: #94a3b8;
+    color: #475569;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
-/* Technical Core Tag Cloud */
+/* Tag clouds styling modifications */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 .skill-tags span {
-    background: rgba(255, 255, 255, 0.03);
-    color: #e2e8f0;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 8px 18px;
-    border-radius: 12px;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 8px 16px;
+    border-radius: 10px;
     font-size: 13px;
-    font-weight: 500;
-    transition: all 0.25s ease;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .skill-tags span:hover {
-    background: rgba(45, 212, 191, 0.1);
-    color: #2dd4bf;
-    border-color: rgba(45, 212, 191, 0.3);
-    transform: translateY(-2px);
+    background: #0d9488;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* Project Layout Dynamic Grid */
+/* Project Grids Structuring */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+    gap: 16px;
 }
 
-/* Premium Project Cards */
+/* Premium Project Containers */
 .project-box {
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
     overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-box a {
@@ -153,51 +145,46 @@ body {
 }
 
 .project-box .icon {
-    font-size: 22px;
-    margin-bottom: 14px;
-    opacity: 0.8;
-    transition: transform 0.3s ease;
+    font-size: 20px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
 }
 
 .project-box .title {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #64748b;
-    margin-bottom: 6px;
+    color: #94a3b8;
+    margin-bottom: 4px;
     letter-spacing: 0.5px;
 }
 
 .project-box .desc {
     font-size: 14px;
     font-weight: 600;
-    color: #e2e8f0;
+    color: #334155;
     line-height: 1.4;
 }
 
-/* Interactivity Enhancements */
+/* Dynamic Interaction Overrides */
 .project-box:hover {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(45, 212, 191, 0.3);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    background: #fafafa;
+    border-color: #0d9488;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -10px rgba(13, 148, 136, 0.15);
 }
 
 .project-box:hover .desc {
-    color: #2dd4bf;
+    color: #0d9488;
 }
 
-.project-box:hover .icon {
-    transform: scale(1.15);
-}
-
-/* Accent highlight for the Exam */
+/* Highlighting the central Exams cards uniquely */
 .exam-box {
-    background: rgba(45, 212, 191, 0.02);
-    border-color: rgba(45, 212, 191, 0.1);
+    background: #fafbfc;
+    border-color: #cbd5e1;
 }
 
-/* Responsiveness Adaptations */
+/* Responsive Structural Breakpoints */
 @media (max-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -212,14 +199,14 @@ body {
         padding: 100px 16px 40px 16px;
     }
     .card {
-        padding: 80px 20px 30px 20px;
-        border-radius: 24px;
+        padding: 80px 16px 30px 16px;
+        border-radius: 20px;
     }
     .profile-section h1 {
         font-size: 28px;
     }
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
     }
 }
