@@ -270,7 +270,26 @@ body {
     display: block;
 }
 
-/* NEW: PROJECT DESIGN SECTION LAYOUT */
+/* ==========================================
+   5b. NEW SIDE BY SIDE DESIGN LAYOUT 
+   ========================================== */
+.flex-projects-row {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+
+.split-col {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+
+.row-override {
+    grid-template-columns: 1fr !important;
+}
+
+/* PROJECT DESIGN SECTION LAYOUT */
 .project-design-card {
     background: rgba(51, 65, 85, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -387,6 +406,13 @@ body {
 /* ==========================================
    7. RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================== */
+@media (max-width: 768px) {
+    .flex-projects-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 @media (max-width: 640px) {
     body {
         padding: 20px 12px;
