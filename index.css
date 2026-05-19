@@ -1,5 +1,94 @@
 /* ==========================================
-   UPDATED: CONTACT SECTION STYLING
+   1. RESET & FOUNDATIONS
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* ==========================================
+   2. PROFILE PIC (TOP CENTER)
+   ========================================== */
+.avatar-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0d9488;
+    box-shadow: 0 8px 32px rgba(13, 148, 136, 0.25);
+    background-color: #1e293b;
+}
+
+/* ==========================================
+   3. MAIN DASHBOARD CARD
+   ========================================== */
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    width: 100%;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Typography */
+.profile-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-section h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(to right, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+.course {
+    color: #0d9488;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.school {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   CONTACT SECTION STYLING (SKY BLUE THEME)
    ========================================== */
 .contact-info {
     margin-top: 18px;
@@ -13,20 +102,20 @@
 .contact-link {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.88rem;
-    letter-spacing: 0.3px; /* Slightly tracked out for a cleaner, modern look */
-    color: #38bdf8; /* Deep sky blue color */
+    letter-spacing: 0.3px;
+    color: #38bdf8; /* Deep sky blue */
     text-decoration: none;
-    font-weight: 600; /* Made slightly bolder so the color pops nicely */
-    background: rgba(56, 189, 248, 0.04); /* Subtle matching tint background */
+    font-weight: 600;
+    background: rgba(56, 189, 248, 0.04);
     padding: 6px 16px;
     border-radius: 20px;
-    border: 1px solid rgba(56, 189, 248, 0.15); /* Delicate sky blue border */
+    border: 1px solid rgba(56, 189, 248, 0.15);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover {
     color: #ffffff;
-    background: #38bdf8; /* Solid background swap on hover */
+    background: #38bdf8;
     border-color: #38bdf8;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
@@ -36,4 +125,168 @@
     color: #475569;
     user-select: none;
     font-size: 0.9rem;
+}
+
+/* ==========================================
+   4. TECHNICAL CORE (SKILLS)
+   ========================================== */
+.skills {
+    margin-bottom: 40px;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.skills h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background: rgba(51, 65, 85, 0.5);
+    color: #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.skill-tags span:hover {
+    background: #0d9488;
+    color: #ffffff;
+    border-color: #0d9488;
+    transform: translateY(-1px);
+}
+
+/* ==========================================
+   5. PROJECTS GRID & WRAPPER ARCHITECTURE
+   ========================================== */
+.projects h2 {
+    font-size: 1.3rem;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 14px;
+}
+
+.projects h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background: #0d9488;
+    border-radius: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.project-box a {
+    display: flex;
+    flex-direction: column;
+    background: rgba(51, 65, 85, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-box a:hover {
+    background: rgba(51, 65, 85, 0.45);
+    border-color: rgba(13, 148, 136, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-box .icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.project-box .title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.project-box .desc {
+    color: #94a3b8;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+/* Special Variant Styling for Exams */
+.exam-box a {
+    border-color: rgba(234, 179, 8, 0.2);
+}
+
+.exam-box a:hover {
+    border-color: rgba(234, 179, 8, 0.5);
+    background: rgba(234, 179, 8, 0.05);
+}
+
+/* Certificate Media Image Framework */
+.certificate-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 640px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 24px 16px;
+    }
+
+    .profile-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contact-info .separator {
+        display: none;
+    }
+
+    .contact-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
