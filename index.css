@@ -270,6 +270,70 @@ body {
     display: block;
 }
 
+/* NEW: PROJECT DESIGN SECTION LAYOUT */
+.project-design-card {
+    background: rgba(51, 65, 85, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-design-info h3 {
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.project-design-list {
+    list-style-position: outside;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-design-list li {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.project-design-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.design-img-wrapper {
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.design-img-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.img-caption {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
 /* ==========================================
    6. INTERACTIVE LIGHTBOX ZOOM EFFECTS
    ========================================== */
