@@ -14,7 +14,7 @@
     <div class="container">
         
         <div class="avatar-wrapper">
-            <img src="https://raw.githubusercontent.com/owadono/github.io/main/owadono.jpg" alt="Joshua Castillo" class="profile-pic">
+            <img src="https://raw.githubusercontent.com/owadono/github.io/main/owadono.jpg" alt="Joshua Castillo" class="profile-pic zoomable" onclick="zoomImage(this)">
         </div>
 
         <div class="card">
@@ -34,15 +34,15 @@
             <div class="skills">
                 <h2>Technical Core</h2>
                 <div class="skill-tags">
-                    <span>Linux</span>
-                    <span>Ubuntu</span>
-                    <span>CentOS</span>
-                    <span>Git & GitHub</span>
-                    <span>SSH</span>
-                    <span>Networking</span>
-                    <span>HTML & CSS</span>
-                    <span>Virtual Machines</span>
-                    <span>Python</span>
+                    <a href="https://www.linux.org" target="_blank">Linux</a>
+                    <a href="https://ubuntu.com" target="_blank">Ubuntu</a>
+                    <a href="https://www.centos.org" target="_blank">CentOS</a>
+                    <a href="https://git-scm.com" target="_blank">Git & GitHub</a>
+                    <a href="https://www.openssh.com" target="_blank">SSH</a>
+                    <a href="https://www.cisco.com" target="_blank">Networking</a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML & CSS</a>
+                    <a href="https://www.virtualbox.org" target="_blank">Virtual Machines</a>
+                    <a href="https://www.python.org" target="_blank">Python</a>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <h2>Cloud Quest Completer</h2>
                 <div class="certificate-container">
                     <div class="certificate-wrapper">
-                        <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/Cloud%20Quest%20Certificate.jfif" alt="Cloud Quest Certificate">
+                        <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/Cloud%20Quest%20Certificate.jfif" alt="Cloud Quest Certificate" class="zoomable" onclick="zoomImage(this)">
                     </div>
                 </div>
             </div>
@@ -274,7 +274,12 @@
         </div>
     </div>
 
+    <div id="imageLightbox" class="lightbox" onclick="closeZoom()">
+        <img id="lightboxImg" src="" alt="Enlarged View">
+    </div>
+
     <script>
+        // Clipboard Copy Action
         function copyToClipboard(text, element) {
             navigator.clipboard.writeText(text).then(() => {
                 const originalText = element.innerHTML;
@@ -287,6 +292,19 @@
             }).catch(err => {
                 console.error('Could not copy text: ', err);
             });
+        }
+
+        // Image Zoom Actions
+        function zoomImage(imgElement) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = imgElement.src;
+            lightbox.classList.add('active');
+        }
+
+        function closeZoom() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
         }
     </script>
 </body>
