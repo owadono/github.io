@@ -8,159 +8,180 @@
 }
 
 body {
-    background: radial-gradient(circle at top linear, #1e293b, #0f172a);
+    background: radial-gradient(circle at top, #1e3a5f, #0f172a 70%);
     background-color: #0f172a;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
+    padding: 80px 20px 40px 20px; /* Top padding leaves room for floating avatar */
     color: #f8fafc;
 }
 
 .container {
     width: 100%;
-    max-width: 950px;
+    max-width: 1100px; /* Widened slightly to give the 3x3 grid room to breathe */
+    position: relative;
 }
 
-/* Glassmorphism main container card */
-.card {
-    background: rgba(30, 41, 59, 0.4);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 50px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Profile UI */
-.profile-section {
-    text-align: center;
-    margin-bottom: 45px;
+/* Floating Image Position Centered at Top */
+.avatar-wrapper {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .profile-pic {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 20px; /* Square with rounded corners matches the reference image style */
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    border: 3px solid #14b8a6; /* Vibrant teal accent border */
+    box-shadow: 0 8px 30px rgba(20, 184, 166, 0.3);
+    background-color: #1e293b;
+}
+
+/* Dark Frosted Glass Dashboard Card */
+.card {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 80px 40px 40px 40px; /* Extra top padding to offset the avatar */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Profile Text Styling */
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .profile-section h1 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 8px;
-    background: linear-gradient(to right, #ffffff, #cbd5e1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .course {
     font-size: 16px;
     font-weight: 500;
-    color: #38bdf8;
-    margin-bottom: 4px;
+    color: #94a3b8;
+    margin-bottom: 6px;
 }
 
 .school {
     font-size: 14px;
-    color: #94a3b8;
+    color: #64748b;
 }
 
 /* Section Headings */
 .skills h2,
 .projects h2 {
-    margin-bottom: 24px;
-    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-weight: 600;
     color: #f1f5f9;
     letter-spacing: -0.3px;
-    position: relative;
 }
 
-/* Interactive Pill Badges */
+/* Darker pill look for Skills */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .skill-tags span {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 8px 16px;
+    background: rgba(20, 184, 166, 0.12);
+    color: #2dd4bf;
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    padding: 6px 16px;
     border-radius: 100px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.25s ease;
-    cursor: default;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .skill-tags span:hover {
-    background: #38bdf8;
+    background: #14b8a6;
     color: #0f172a;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
 }
 
-/* Projects Interactive Layout Grid */
+/* 3x3 Grid Layout Configuration */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns on desktop */
     gap: 16px;
 }
 
-/* Making entire box clickable and clean */
+/* Project Cards */
 .project-box {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px; /* Keeps grids beautifully uniform */
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .project-box a {
     text-decoration: none;
     color: #cbd5e1;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 20px;
     width: 100%;
-    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: color 0.2s ease;
 }
 
-/* UI Hover Interactions */
+/* Dashboard Box Hover Interactions */
 .project-box:hover {
-    background: rgba(56, 189, 248, 0.06);
-    border-color: rgba(56, 189, 248, 0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(20, 184, 166, 0.05);
+    border-color: rgba(20, 184, 166, 0.4);
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .project-box:hover a {
-    color: #38bdf8;
+    color: #2dd4bf;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
+/* Responsive Scaling Overrides */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 640px) {
     .card {
-        padding: 30px 20px;
+        padding: 80px 20px 30px 20px;
     }
 
     .profile-section h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Switch to single column stack on mobile */
+        grid-template-columns: 1fr; /* 1 clean vertical column on mobile */
     }
 }
