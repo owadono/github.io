@@ -152,7 +152,6 @@ body {
     gap: 10px;
 }
 
-/* Updated selector to handle active anchor tags smoothly */
 .skill-tags a {
     background: rgba(51, 65, 85, 0.5);
     color: #e2e8f0;
