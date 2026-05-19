@@ -8,13 +8,13 @@
 }
 
 body {
-    background-color: #f8fafc; /* Crisp, clean slate-white background */
+    background-color: #f8fafc; /* Professional off-white/slate canvas */
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: flex-start; /* Ensures smooth top-to-bottom scrolling layout */
     padding: 120px 20px 60px 20px; 
-    color: #1e293b; /* Premium slate dark font colors */
+    color: #1e293b; /* Deep slate professional type color */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -24,7 +24,7 @@ body {
     position: relative;
 }
 
-/* Profile Image Centering & Layout */
+/* Profile Image Floating Container */
 .avatar-wrapper {
     position: absolute;
     top: -60px;
@@ -36,23 +36,23 @@ body {
 .profile-pic {
     width: 120px;
     height: 120px;
-    border-radius: 24px; 
+    border-radius: 24px; /* Soft geometric modern look */
     object-fit: cover;
-    border: 4px solid #ffffff; /* Crisp border framing */
+    border: 4px solid #ffffff; /* Frame overlay */
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
     background-color: #f1f5f9;
 }
 
-/* Minimalist Corporate Card Layer */
+/* Minimalist Core Information Card */
 .card {
     background: #ffffff;
-    border: 1px solid #e2e8f0; /* Subtle light layout lines */
+    border: 1px solid #e2e8f0; /* Crisp structural division lines */
     border-radius: 24px;
     padding: 90px 50px 50px 50px; 
     box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.03);
 }
 
-/* Profile Typography Elements */
+/* Profile Typography Sections */
 .profile-section {
     text-align: center;
     margin-bottom: 40px;
@@ -69,7 +69,7 @@ body {
 .course {
     font-size: 16px;
     font-weight: 600;
-    color: #0d9488; /* Professional tech-teal focal accent color */
+    color: #0d9488; /* Professional Tech Teal accent focal point */
     margin-bottom: 6px;
     letter-spacing: 0.1px;
 }
@@ -80,7 +80,7 @@ body {
     font-weight: 500;
 }
 
-/* Section Divider Headers */
+/* Segment Header Layouts */
 .skills h2,
 .projects h2 {
     text-align: center;
@@ -92,7 +92,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Tag clouds styling modifications */
+/* Technical Skill Badges */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -117,14 +117,14 @@ body {
     transform: translateY(-1px);
 }
 
-/* Project Grids Structuring */
+/* Dynamic Projects Dashboard Layout */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 16px;
 }
 
-/* Premium Project Containers */
+/* Premium Lab Asset Grid Boxes */
 .project-box {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -166,7 +166,7 @@ body {
     line-height: 1.4;
 }
 
-/* Dynamic Interaction Overrides */
+/* Smooth Interactive States */
 .project-box:hover {
     background: #fafafa;
     border-color: #0d9488;
@@ -178,13 +178,13 @@ body {
     color: #0d9488;
 }
 
-/* Highlighting the central Exams cards uniquely */
+/* Accent framing dedicated to Exam highlights */
 .exam-box {
     background: #fafbfc;
     border-color: #cbd5e1;
 }
 
-/* Responsive Structural Breakpoints */
+/* Adaptive Viewport Breakpoints */
 @media (max-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
