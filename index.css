@@ -1,4 +1,4 @@
-/* style.css */
+/* index.css */
 
 * {
     margin: 0;
@@ -8,23 +8,24 @@
 }
 
 body {
-    background: radial-gradient(circle at top, #1e3a5f, #0f172a 70%);
-    background-color: #0f172a;
+    background: radial-gradient(circle at top, #13233a, #070a13 80%);
+    background-color: #070a13;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 80px 20px 40px 20px; /* Top padding leaves room for floating avatar */
+    align-items: flex-start; /* Prevents overflow issues on long scrollable content */
+    padding: 120px 20px 60px 20px; 
     color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
     width: 100%;
-    max-width: 1100px; /* Widened slightly to give the 3x3 grid room to breathe */
+    max-width: 1140px; 
     position: relative;
 }
 
-/* Floating Image Position Centered at Top */
+/* Profile Image Floating Presentation */
 .avatar-wrapper {
     position: absolute;
     top: -60px;
@@ -36,152 +37,189 @@ body {
 .profile-pic {
     width: 120px;
     height: 120px;
-    border-radius: 20px; /* Square with rounded corners matches the reference image style */
+    border-radius: 24px; 
     object-fit: cover;
-    border: 3px solid #14b8a6; /* Vibrant teal accent border */
-    box-shadow: 0 8px 30px rgba(20, 184, 166, 0.3);
+    border: 2px solid rgba(45, 212, 191, 0.4); 
+    box-shadow: 0 12px 40px rgba(20, 184, 166, 0.25);
     background-color: #1e293b;
 }
 
 /* Dark Frosted Glass Dashboard Card */
 .card {
-    background: rgba(15, 23, 42, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 80px 40px 40px 40px; /* Extra top padding to offset the avatar */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    background: rgba(13, 20, 38, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    padding: 90px 50px 50px 50px; 
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
 }
 
-/* Profile Text Styling */
+/* Profile Section Styling */
 .profile-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .profile-section h1 {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 10px;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
     color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .course {
     font-size: 16px;
     font-weight: 500;
-    color: #94a3b8;
+    color: #2dd4bf; 
     margin-bottom: 6px;
+    letter-spacing: 0.2px;
 }
 
 .school {
     font-size: 14px;
     color: #64748b;
+    font-weight: 500;
 }
 
 /* Section Headings */
 .skills h2,
 .projects h2 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #f1f5f9;
-    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-/* Darker pill look for Skills */
+/* Technical Core Tag Cloud */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 50px;
+    gap: 8px;
+    margin-bottom: 55px;
 }
 
 .skill-tags span {
-    background: rgba(20, 184, 166, 0.12);
-    color: #2dd4bf;
-    border: 1px solid rgba(20, 184, 166, 0.25);
-    padding: 6px 16px;
-    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 18px;
+    border-radius: 12px;
     font-size: 13px;
-    font-weight: 600;
-    transition: all 0.2s ease;
+    font-weight: 500;
+    transition: all 0.25s ease;
 }
 
 .skill-tags span:hover {
-    background: #14b8a6;
-    color: #0f172a;
+    background: rgba(45, 212, 191, 0.1);
+    color: #2dd4bf;
+    border-color: rgba(45, 212, 191, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
 }
 
-/* 3x3 Grid Layout Configuration */
+/* Project Layout Dynamic Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns on desktop */
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
 }
 
-/* Project Cards */
+/* Premium Project Cards */
 .project-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 120px; /* Keeps grids beautifully uniform */
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-box a {
     text-decoration: none;
-    color: #cbd5e1;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.6;
-    padding: 20px;
+    padding: 24px;
     width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    height: 100%;
 }
 
-/* Dashboard Box Hover Interactions */
+.project-box .icon {
+    font-size: 22px;
+    margin-bottom: 14px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.project-box .title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.project-box .desc {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e2e8f0;
+    line-height: 1.4;
+}
+
+/* Interactivity Enhancements */
 .project-box:hover {
-    background: rgba(20, 184, 166, 0.05);
-    border-color: rgba(20, 184, 166, 0.4);
-    transform: scale(1.03);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(45, 212, 191, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
-.project-box:hover a {
+.project-box:hover .desc {
     color: #2dd4bf;
 }
 
-/* Responsive Scaling Overrides */
+.project-box:hover .icon {
+    transform: scale(1.15);
+}
+
+/* Accent highlight for the Exam */
+.exam-box {
+    background: rgba(45, 212, 191, 0.02);
+    border-color: rgba(45, 212, 191, 0.1);
+}
+
+/* Responsiveness Adaptations */
 @media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        padding: 90px 30px 40px 30px;
     }
 }
 
 @media (max-width: 640px) {
+    body {
+        padding: 100px 16px 40px 16px;
+    }
     .card {
         padding: 80px 20px 30px 20px;
+        border-radius: 24px;
     }
-
     .profile-section h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
-
     .projects-grid {
-        grid-template-columns: 1fr; /* 1 clean vertical column on mobile */
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
