@@ -230,4 +230,113 @@
                         </a>
                     </div>
 
-                    <div class="project-box
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Activity%207%20-%20Managing%20Files%20and%20Creating%20Roles%20in%20Ansible.pdf" target="_blank">
+                            <span class="icon">📂</span>
+                            <span class="title">Activity 7</span>
+                            <span class="desc">Managing Files & Creating Roles in Ansible</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%208_%20Install%2C%20Configure%2C%20and%20Manage%20Availability%20Monitoring%20tools%20%20(1).pdf" target="_blank">
+                            <span class="icon">📊</span>
+                            <span class="title">Activity 8</span>
+                            <span class="desc">Availability Monitoring Tools Installation</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%209_%20Install%2C%20Configure%2C%20and%20Manage%20Performance%20Monitoring%20tools.pdf" target="_blank">
+                            <span class="icon">📈</span>
+                            <span class="title">Activity 9</span>
+                            <span class="desc">Performance Monitoring & Management</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Activity%2010_%20Install%2C%20Configure%2C%20and%20Manage%20Log%20Monitoring%20tools.pdf" target="_blank">
+                            <span class="icon">📝</span>
+                            <span class="title">Activity 10</span>
+                            <span class="desc">Log Monitoring Tools Configuration</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box exam-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/Midterms/Castillo_Midterm%20Skills%20Exam%20-%20CPE%20232%20.pdf" target="_blank">
+                            <span class="icon">🎓</span>
+                            <span class="title">Skills Exam</span>
+                            <span class="desc">Midterm Skills Exam — CPE 232</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Castillo_Activity%2012%20Build%20a%20Sample%20Web%20App%20in%20a%20Docker%20Container.pdf" target="_blank">
+                            <span class="icon">🐳</span>
+                            <span class="title">Activity 12</span>
+                            <span class="desc">Build Sample Web App in Docker Container</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group2_Activity%2013%20-%20OpenStack%20Prerequisite%20Installation.docx.pdf" target="_blank">
+                            <span class="icon">☁️</span>
+                            <span class="title">Activity 13</span>
+                            <span class="desc">OpenStack Prerequisite Installation</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/GROUP2_Activity-14-OpenStack-Installation-Keystone-Glance-Nova-1.pdf" target="_blank">
+                            <span class="icon">⚙️</span>
+                            <span class="title">Activity 14</span>
+                            <span class="desc">OpenStack Setup: Keystone, Glance, Nova</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group%202_Activity%2015-%20OpenStack%20Installation%20(Neutron%2C%20Horizon%2C%20Cinder).pdf" target="_blank">
+                            <span class="icon">🌐</span>
+                            <span class="title">Activity 15</span>
+                            <span class="desc">OpenStack Setup: Neutron, Horizon, Cinder</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="imageLightbox" class="lightbox" onclick="closeZoom()">
+        <img id="lightboxImg" src="" alt="Enlarged View">
+    </div>
+
+    <script>
+        function copyToClipboard(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = element.innerHTML;
+                element.innerHTML = "✨ Copied!";
+                element.style.borderColor = "#ffffff";
+                setTimeout(() => {
+                    element.innerHTML = originalText;
+                    element.style.borderColor = "rgba(56, 189, 248, 0.15)";
+                }, 1500);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        function zoomImage(imgElement) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = imgElement.src;
+            lightbox.classList.add('active');
+        }
+
+        function closeZoom() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
