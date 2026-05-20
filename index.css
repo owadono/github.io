@@ -127,7 +127,7 @@ body {
 }
 
 /* ==========================================
-   4. TECHNICAL CORE (SKILLS LINKS)
+   4. TECHNICAL CORE (UNIFORM IMAGE BUTTONS)
    ========================================== */
 .skills {
     margin-bottom: 40px;
@@ -146,29 +146,44 @@ body {
     font-weight: 700;
 }
 
-.skill-tags {
+/* Layout system for perfectly proportioned image boxes */
+.skill-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.skill-img-btn {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skill-tags a {
-    background: rgba(51, 65, 85, 0.5);
-    color: #e2e8f0;
-    padding: 8px 16px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background: rgba(51, 65, 85, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 12px;
+    height: 72px; /* Set layout dimension constraints */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.2s ease;
 }
 
-.skill-tags a:hover {
-    background: #0d9488;
-    color: #ffffff;
-    border-color: #0d9488;
-    transform: translateY(-1px);
+.skill-img-btn img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Stops icons from warping/stretching */
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+    transition: transform 0.25s ease;
+}
+
+/* Hover dynamics built to match your original link blocks */
+.skill-img-btn:hover {
+    background: rgba(51, 65, 85, 0.55);
+    border-color: rgba(13, 148, 136, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.skill-img-btn:hover img {
+    transform: scale(1.05);
 }
 
 /* ==========================================
@@ -237,7 +252,7 @@ body {
     line-height: 1.4;
 }
 
-/* Static Seminars Styling (Non-clickable grid box version) */
+/* Static Seminars Styling */
 .seminar-text-box {
     display: flex;
     flex-direction: column;
@@ -488,5 +503,14 @@ body {
     
     .certificate-wrapper {
         max-width: 100%;
+    }
+
+    /* Handles responsivity on image button sizes for mobile phones */
+    .skill-images-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .skill-img-btn {
+        height: 62px;
     }
 }
