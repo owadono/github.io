@@ -87,7 +87,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* CONTACT SECTION STYLING (SKY BLUE BUTTON THEME) */
+/* CONTACT SECTION STYLING */
 .contact-info {
     margin-top: 18px;
     display: flex;
@@ -219,22 +219,33 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-box .icon {
+.project-box .icon, .seminar-text-box .icon {
     font-size: 1.8rem;
     margin-bottom: 12px;
 }
 
-.project-box .title {
+.project-box .title, .seminar-text-box .title {
     color: #ffffff;
     font-size: 1.05rem;
     font-weight: 600;
     margin-bottom: 6px;
 }
 
-.project-box .desc {
+.project-box .desc, .seminar-text-box .desc {
     color: #94a3b8;
     font-size: 0.88rem;
     line-height: 1.4;
+}
+
+/* Static Seminars Styling (Non-clickable grid box version) */
+.seminar-text-box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(51, 65, 85, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    height: 100%;
 }
 
 /* Special Variant Styling for Exams */
@@ -276,7 +287,6 @@ body {
 .flex-projects-row {
     display: flex;
     gap: 32px;
-    margin-bottom: 50px;
     align-items: flex-start;
 }
 
@@ -308,7 +318,7 @@ body {
     line-height: 1.4;
 }
 
-/* Styled Abstract Section Block (Centered Layout) */
+/* Styled Abstract Section Block */
 .project-abstract {
     background: rgba(15, 23, 42, 0.3);
     border-top: 2px solid #0d9488;
