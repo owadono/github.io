@@ -201,4 +201,98 @@
                     </div>
 
                     <div class="project-box">
-                        <a href="
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/GROUP2_Activity-14-OpenStack-Installation-Keystone-Glance-Nova-1.pdf" target="_blank">
+                            <span class="icon">⚙️</span>
+                            <span class="title">Activity 14</span>
+                            <span class="desc">OpenStack Setup: Keystone, Glance, Nova</span>
+                        </a>
+                    </div>
+
+                    <div class="project-box">
+                        <a href="https://github.com/owadono/github.io/blob/main/sysad2/finals/Group%202_Activity%2015-%20OpenStack%20Installation%20(Neutron%2C%20Horizon%2C%20Cinder).pdf" target="_blank">
+                            <span class="icon">🌐</span>
+                            <span class="title">Activity 15</span>
+                            <span class="desc">OpenStack Setup: Neutron, Horizon, Cinder</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-projects-row" style="margin-bottom: 50px;">
+                <div class="projects split-col">
+                    <h2>Python-Based Projects</h2>
+                    <div class="projects-grid row-override">
+                        <div class="project-box">
+                            <a href="https://github.com/owadono/Castillo-Joshua-Portfolio/blob/main/G2_EMTEK1_Final%20Project%20-%20CPE%20018.pdf" target="_blank">
+                                <span class="icon">🐍</span>
+                                <span class="title">Object Detection App</span>
+                                <span class="desc">Garbage Classification & Live Biodegradable Detection (CPE 018)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects split-col">
+                    <h2>Cloud Quest Completer</h2>
+                    <div class="certificate-container">
+                        <div class="certificate-wrapper">
+                            <img src="https://raw.githubusercontent.com/owadono/Castillo-Joshua-Portfolio/main/Cloud%20Quest%20Certificate.jfif" alt="Cloud Quest Certificate" class="zoomable" onclick="zoomImage(this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects">
+                <h2>Seminars & Trainings</h2>
+                <div class="seminars-list-card">
+                    <ul class="seminars-bullet-list">
+                        <li><span class="bullet-emoji">🌐</span> <strong>Network Engineering</strong> — Aug 16, 2025</li>
+                        <li><span class="bullet-emoji">☁️</span> <strong>Cloud Essentials for Future Professionals</strong> — Aug 30, 2025</li>
+                        <li><span class="bullet-emoji">🚀</span> <strong>DevOps of the Future</strong> — Sept 13, 2025</li>
+                        <li><span class="bullet-emoji">🌤️</span> <strong>Beyond the Cloud</strong> — Sept 13, 2025</li>
+                        <li><span class="bullet-emoji">📊</span> <strong>A Day in the Life of a Data Engineer</strong> — Sept 17, 2025</li>
+                        <li><span class="bullet-emoji">📈</span> <strong>Marketing for Computer Engineers</strong> — Sept 20, 2025</li>
+                        <li><span class="bullet-emoji">🧠</span> <strong>AI and Analytics in Action</strong> — Sept 20, 2025</li>
+                        <li><span class="bullet-emoji">💻</span> <strong>Full Stack in Practice</strong> — Sept 27, 2025</li>
+                        <li><span class="bullet-emoji">🛡️</span> <strong>HAWKSIGHT Web2 & Web3 Cybersecurity</strong> — Oct 4, 2025</li>
+                        <li><span class="bullet-emoji">☁️</span> <strong>Introduction to Cloud Computing</strong> — Oct 11, 2025</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="imageLightbox" class="lightbox" onclick="closeZoom()">
+        <img id="lightboxImg" src="" alt="Enlarged View">
+    </div>
+
+    <script>
+        function copyToClipboard(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = element.innerHTML;
+                element.innerHTML = "✨ Copied!";
+                element.style.borderColor = "#ffffff";
+                setTimeout(() => {
+                    element.innerHTML = originalText;
+                    element.style.borderColor = "rgba(56, 189, 248, 0.15)";
+                }, 1500);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        function zoomImage(imgElement) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = imgElement.src;
+            lightbox.classList.add('active');
+        }
+
+        function closeZoom() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
