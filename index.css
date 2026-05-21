@@ -127,7 +127,7 @@ body {
 }
 
 /* ==========================================
-   4. TECHNICAL CORE (CENTERED AND REBALANCED)
+   4. TECHNICAL CORE
    ========================================== */
 .skills {
     margin-bottom: 40px;
@@ -137,7 +137,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Placed at the top center of this specific segment */
 .skills h2 {
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -148,14 +147,12 @@ body {
     text-align: center;
 }
 
-/* Layout system for perfectly proportioned image buttons */
 .skill-images-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 14px;
 }
 
-/* Clickable button configuration with a responsive border highlight matrix */
 .skill-img-btn {
     display: flex;
     align-items: center;
@@ -164,14 +161,13 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     padding: 14px;
-    aspect-ratio: 1 / 1; /* Forces true uniform dimensions for all tiles */
+    aspect-ratio: 1 / 1;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     position: relative;
     overflow: hidden;
 }
 
-/* Inside asset stabilization — regularizes wide items like CentOS */
 .skill-img-btn img {
     max-width: 85%;
     max-height: 85%;
@@ -180,16 +176,15 @@ body {
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Interactive Bounding Highlight Mouse Hover Mechanics */
 .skill-img-btn:hover {
     background: rgba(51, 65, 85, 0.45);
-    border-color: #0d9488; /* High-visibility bounding cyan highlight box */
-    transform: translateY(-4px); /* Vertical physical lift feedback */
+    border-color: #0d9488;
+    transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(13, 148, 136, 0.15), 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .skill-img-btn:hover img {
-    transform: scale(1.08); /* Internal asset pop out */
+    transform: scale(1.08);
 }
 
 /* ==========================================
@@ -240,36 +235,24 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.project-box .icon, .seminar-text-box .icon {
+.project-box .icon {
     font-size: 1.8rem;
     margin-bottom: 12px;
 }
 
-.project-box .title, .seminar-text-box .title {
+.project-box .title {
     color: #ffffff;
     font-size: 1.05rem;
     font-weight: 600;
     margin-bottom: 6px;
 }
 
-.project-box .desc, .seminar-text-box .desc {
+.project-box .desc {
     color: #94a3b8;
     font-size: 0.88rem;
     line-height: 1.4;
 }
 
-/* Static Seminars Styling */
-.seminar-text-box {
-    display: flex;
-    flex-direction: column;
-    background: rgba(51, 65, 85, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    padding: 20px;
-    height: 100%;
-}
-
-/* Special Variant Styling for Exams */
 .exam-box a {
     border-color: rgba(234, 179, 8, 0.2);
 }
@@ -339,7 +322,6 @@ body {
     line-height: 1.4;
 }
 
-/* Styled Abstract Section Block */
 .project-abstract {
     background: rgba(15, 23, 42, 0.3);
     border-top: 2px solid #0d9488;
@@ -410,6 +392,45 @@ body {
     font-size: 0.8rem;
     color: #64748b;
     font-weight: 500;
+}
+
+/* ==========================================
+   5c. TEXT-BASED SEMINARS BULLET LIST STYLING
+   ========================================== */
+.seminars-list-card {
+    background: rgba(51, 65, 85, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.seminars-bullet-list {
+    list-style: none; /* Removes native browser bullet dots */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.seminars-bullet-list li {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.seminars-bullet-list strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.bullet-emoji {
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
 
 /* ==========================================
@@ -511,9 +532,18 @@ body {
         max-width: 100%;
     }
 
-    /* Adapts grid tiles cleanly on smaller handheld screen sizes */
     .skill-images-grid {
         grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
         gap: 10px;
+    }
+    
+    /* Responsive tweaks for the text list layout on small mobile views */
+    .seminars-bullet-list li {
+        font-size: 0.9rem;
+        align-items: flex-start;
+    }
+    
+    .bullet-emoji {
+        margin-top: 2px;
     }
 }
